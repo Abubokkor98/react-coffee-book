@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="navbar backdrop-blur-xl bg-white/30 z-50 fixed ">
+    <div className="navbar backdrop-blur-xl bg-white/30 z-50 fixed max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
