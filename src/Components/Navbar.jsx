@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="navbar backdrop-blur-xl bg-white/30 z-50 fixed max-w-screen-xl mx-auto">
+    <div className=" navbar backdrop-blur-xl bg-white/30 z-50 fixed max-w-screen-xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,7 +53,7 @@ export default function Navbar() {
           </ul>
         </div>
         <Link to={"/"} className="btn btn-ghost text-xl">
-          COOK_BOOK
+          COFFEE_BOOK
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
