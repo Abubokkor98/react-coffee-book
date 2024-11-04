@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import nutritionImg from '../assets/nutrition.png';
-import { addFavorite } from "../utils";
+import { addFavorite, getAllFavorite } from "../utils";
 
 export default function CoffeeDetails() {
   const { id } = useParams();
@@ -26,6 +26,7 @@ export default function CoffeeDetails() {
 
   const handleFavorite = coffee =>{
     addFavorite(coffee);
+    getAllFavorite()
   }
 
   return (
