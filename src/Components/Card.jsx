@@ -1,18 +1,21 @@
 import React from 'react'
 
 export default function Card({coffee}) {
-    const {name, image, category, type, description} = coffee;
+    const {name, image, category, type, rating,origin,popularity} = coffee;
   return (
-    <div className="card card-compact bg-base-100 w-full shadow-xl">
-  <figure>
-    <img className='w-full'
+    <div className="transition hover:scale-105 shadow-xl w-full overflow-hidden">
+  <figure className='w-full h-48 overflow-hidden'>
+    <img className=''
       src={image}
       alt={name} />
   </figure>
-  <div className="card-body">
-    <h2>{category}</h2>
-    <h2 className="card-title">{name}</h2>
-    <p>{description}</p>
+  <div className="p-4">
+    <h2 className='text-xl'>Name: {name}</h2>
+    <h2 className="">Category: {category}</h2>
+    <p>Type: {type}</p>
+    <p>Origin:{origin}</p>
+    <p>Rating: {rating}</p>
+    <p>Popular: {popularity}</p>
 
   </div>
 </div>
