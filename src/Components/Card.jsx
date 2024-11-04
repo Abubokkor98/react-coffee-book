@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Card({coffee}) {
-    const {name, image, category, type, rating,origin,popularity} = coffee;
+    const {id, name, image, category, type, rating,origin,popularity} = coffee;
   return (
-    <div className="transition hover:scale-105 shadow-xl w-full overflow-hidden">
+<div className='flex relative my-10'>
+<Link to={`/coffee/${id}`} className="transition hover:scale-105 shadow-xl w-full overflow-hidden">
   <figure className='w-full h-48 overflow-hidden'>
     <img className=''
       src={image}
@@ -18,6 +20,7 @@ export default function Card({coffee}) {
     <p>Popular: {popularity}</p>
 
   </div>
+</Link>
 </div>
   )
 }
