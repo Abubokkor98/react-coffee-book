@@ -7,10 +7,18 @@ export default function CoffeeDetails() {
   const { id } = useParams();
   const data = useLoaderData();
   const [coffee, setCoffee] = useState({});
+//   for disable btn
+const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     const singleData = data.find((coffee) => coffee.id == id);
     setCoffee(singleData);
+    // fot btn
+    const favorites = getAllFavorite();
+    const isExist = favorites.find(item=> item.id == singleData.id);
+    if(isExist){
+        setIsFavorite(true);
+    }
   }, []);
 
   const {
@@ -26,7 +34,8 @@ export default function CoffeeDetails() {
 
   const handleFavorite = coffee =>{
     addFavorite(coffee);
-    getAllFavorite()
+    // getAllFavorite();
+    setIsFavorite(true);
   }
 
   return (
@@ -46,6 +55,7 @@ export default function CoffeeDetails() {
         </div>
         <div>
           <button
+          disabled={isFavorite}
             onClick={() => handleFavorite(coffee)}
             className='btn btn-warning'
           >
