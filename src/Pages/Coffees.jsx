@@ -12,7 +12,7 @@ export default function Coffees() {
       const sorted = [...data].sort((a, b) => b.popularity - a.popularity);
       setCoffees(sorted);
     } else if (sortBy == "rating") {
-      const sorted = [...data].sort((a, b) => b.rating - a.rating);
+      const sorted = [...data].sort((a, b) => a.rating - b.rating);
       setCoffees(sorted);
     }
   };
@@ -30,13 +30,13 @@ export default function Coffees() {
             onClick={() => handleSort("popularity")}
             className="btn btn-warning"
           >
-            Sort By Popularity
+            Sort By Popularity (DSC)
           </button>
           <button
             onClick={() => handleSort("rating")}
             className="btn btn-warning"
           >
-            Sort By Rating
+            Sort By Rating (ASC)
           </button>
         </div>
       </div>
